@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minerva Social Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="logo">
+      <h1>Minerva Social Club</h1>
+    </div>
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cartãodevisitas.html">Sobre</a></li>
+        <li><a href="formstest.html">Cadastro</a></li>
+        <li><a href="#login"><button class="login-btn">Login</button></a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main-content">
+    <h2>Bem Vindo</h2>
+    <p>Um <span style="color: red;">simples</span> website.</p>
+  </div>
+    <main>
+        <article>
+            <h2>Prime News</h2>
+        </article>
+        <section>
+            <h3>Ciência</h3>
+        </section>
+        <section>
+            <h3>Geopolítica</h3>
+        </section>
+        <section>
+            <h3>Entretenimento</h3>
+        </section>
+        <section>
+            <h3>Esporte</h3>
+        </section>
+    </main>
+    <aside>
+        We have a lot of expertise on the matter.
+    </aside>
+    <footer>
+        <p style="text-align: center;">&copy; All Rights Reserved 2025</p>
+    </footer>
+<script>
+    function toggleMenu() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('active');
+    }
+
+    window.addEventListener('click', function(e) {
+      const sidebar = document.getElementById('sidebar');
+      const menuIcon = document.querySelector('.menu-icon');
+      if (!sidebar.contains(e.target) && !menuIcon.contains(e.target)) {
+        sidebar.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

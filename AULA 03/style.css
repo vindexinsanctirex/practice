@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('blankcry.jpg');
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  color: white;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 30px;
+  cursor: pointer;
+  margin-right: 20px; /* Space between the icon and logo */
+}
+
+.menu-icon .bar {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.logo h1 {
+  margin: 0;
+  margin-left: 20px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: -200px; /* Initially off-screen */
+  background-color: #333;
+  width: 200px;
+  height: 100vh;
+  padding-top: 50px;
+  opacity: 0; /* Make it invisible initially */
+  transition: left 0.3s ease, opacity 0.3s ease; /* Smooth transition for sliding and fading */
+  z-index: 999; /* Ensure it stays on top when active */
+}
+
+.sidebar.active {
+  left: 0; /* Slide it into view */
+  opacity: 1; /* Make it visible */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #5757;
+
+.login-btn {
+  background-color: transparent;
+  border: 3px solid #4CAF50;  /* Wide green border */
+  color: #4CAF50;  /* Green text color */
+  padding: 12px 30px;  /* Adjust padding for a wide button */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 30px;  /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;  /* Smooth transition on hover */
+}
+
+.login-btn:hover {
+  background-color: #4CAF50;  /* Green background when hovered */
+  color: white;  /* White text when hovered */
+  border: 3px solid transparent;  /* Remove border color when hovered */
+}
