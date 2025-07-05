@@ -1,0 +1,160 @@
+/* ===== Variáveis Globais ===== */
+:root {
+    /* Tamanhos de fonte padrão (mobile-first) */
+    --font-size-h1: 1.5rem;
+    --font-size-h2: 1.3rem;
+    --font-size-p: 1rem;
+  
+    /* Espaçamentos padrão */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+  }
+  
+  /* ===== Estilos Base ===== */
+  body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: var(--spacing-medium);
+    line-height: 1.6;
+    background: #1a1a2e;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  header, main, footer {
+    margin-bottom: var(--spacing-large);
+    background: #16213e;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: var(--spacing-medium);
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  h1 {
+    font-size: var(--font-size-h1);
+    margin-bottom: var(--spacing-small);
+    color: #e94560;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  
+  h2 {
+    font-size: var(--font-size-h2);
+    margin-bottom: var(--spacing-small);
+    color: #0f3460;
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  
+  p {
+    font-size: var(--font-size-p);
+    margin-bottom: var(--spacing-medium);
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  
+  /* ===== Media Queries para Telas Médias (Tablets) ===== */
+  @media only screen and (min-width: 768px) {
+    :root {
+      --font-size-h1: 2.2rem;
+      --font-size-h2: 1.7rem;
+      --font-size-p: 1.15rem;
+      --spacing-small: 0.75rem;
+      --spacing-medium: 1.5rem;
+      --spacing-large: 3rem;
+    }
+
+    body {
+      background: #ffde59;
+      color: #222;
+      font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    header, main, footer {
+      background: #ff914d;
+      box-shadow: 0 4px 16px rgba(255, 145, 77, 0.25);
+    }
+
+    h1, h2, p {
+      font-family: 'Baloo 2', 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    h1 {
+      color: #3a86ff;
+      letter-spacing: 3px;
+    }
+
+    h2 {
+      color: #ff006e;
+    }
+
+    p {
+      color: #222;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-medium);
+    }
+
+    section {
+      border-left: 8px solid #ff006e;
+      padding-left: var(--spacing-medium);
+      background: #fff;
+      border-radius: 8px;
+      transition: background 0.3s, border 0.3s;
+    }
+  }
+  
+  /* ===== Media Queries para Telas Grandes (Desktop) ===== */
+  @media only screen and (min-width: 1024px) {
+    :root {
+      --font-size-h1: 2.8rem;
+      --font-size-h2: 2.1rem;
+      --font-size-p: 1.3rem;
+      --spacing-small: 1rem;
+      --spacing-medium: 2rem;
+      --spacing-large: 4rem;
+    }
+
+    body {
+      background: #0fffc3;
+      color: #1a0033;
+      font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    }
+
+    header, main, footer {
+      background: #fff;
+      box-shadow: 0 6px 24px rgba(10, 10, 10, 0.18);
+    }
+
+    h1, h2, p {
+      font-family: 'Merriweather', 'Times New Roman', Times, serif;
+    }
+
+    h1 {
+      color: #1a0033;
+      letter-spacing: 4px;
+    }
+
+    h2 {
+      color: #ff2e63;
+    }
+
+    p {
+      color: #1a0033;
+    }
+
+    main {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    section {
+      border-left: 12px solid #2323ff;
+      background: #f5f5f5;
+    }
+  }
+
+/* ===== Google Fonts Import (for demo, add to HTML for production) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Montserrat:wght@700&family=Merriweather:wght@700&display=swap');
