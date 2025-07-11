@@ -1,0 +1,127 @@
+:root {
+    --primary-color: black;
+    --bright-color: white;
+    --secondary-color: #555;
+    --padding-header: 10px 20px;
+    --radius-size: 4px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--bright-color);
+    padding: var(--padding-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.desktop-nav a {
+    color: var(--bright-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: var(--radius-size);
+}
+
+.desktop-nav a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    order: 1; /* Move to the right side */
+}
+
+.mobile-checkbox {
+    display: none;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--bright-color);
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    z-index: 1000;
+}
+
+.mobile-nav a {
+    color: var(--bright-color);
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #555;
+}
+
+.mobile-nav a:hover {
+    background-color: var(--primary-color);
+    padding-left: 1.5rem;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Show mobile nav when checkbox is checked */
+    #mobile-checkbox:checked ~ .mobile-nav {
+        display: flex;
+    }
+
+    /* Burger menu animation */
+    #mobile-checkbox:checked ~ .mobile-menu-toggle .burger-menu span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-checkbox:checked ~ .mobile-menu-toggle .burger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-checkbox:checked ~ .mobile-menu-toggle .burger-menu span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

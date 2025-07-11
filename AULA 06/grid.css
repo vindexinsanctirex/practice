@@ -1,0 +1,48 @@
+/* Container principal - define o grid */
+.container {
+    display: grid;
+    grid-template-areas:
+        "cabecalho cabecalho cabecalho"
+        "menu conteudo lateral"
+        "rodape rodape rodape";
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 70px 1fr 50px;
+    gap: 10px;
+    height: 100vh;
+}
+
+/* Associa cada elemento a uma área do grid */
+.cabecalho {
+    grid-area: cabecalho;
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu {
+    grid-area: menu;
+    background: lightcoral;
+    padding: 20px;
+    text-align: center;
+}
+
+.conteudo {
+    grid-area: conteudo;
+    background: lightgreen;
+    padding: 20px;
+    text-align: center;
+}
+
+.lateral {
+    grid-area: lateral;
+    background: lightsalmon;
+    padding: 20px;
+    text-align: center;
+}
+
+.rodape {
+    grid-area: rodape;
+    background: lightgray;
+    padding: 20px;
+    text-align: center;
+}

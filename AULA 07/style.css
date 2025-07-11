@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 150px;
+    height: 55px;
+    border: none;
+    background-color: cadetblue;
+    color: azure;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover + .origin {
+    animation: mover 5s ease-in-out;   
+    animation-iteration-count: infinite;
+}
+
+span {
+    opacity: 0;
+}
+span:hover {
+    opacity: 1;
+}
+button:hover {
+    background-color: brown;
+ }
+
+textarea{
+    width: 50px;
+    height: 50px;
+    transition: 2s ease;
+    resize: none;
+}
+textarea:focus {
+    width: 75px;
+    height: 75px;
+}
+div {
+    border: 2px solid black;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(0) translateY(0); background-color: aqua; opacity: 0;
+    }
+    33% {
+        transform: translateX(1000px) translateY(50px); background-color: rgb(20, 66, 68); opacity: 0.5;
+    }
+    66% {
+        transform: translateX(150px) translateY(400px); background-color: coral; opacity: 1;
+    }
+    100% {
+        transform: translateX(0) translateY(0); background-color: aqua; opacity: 0;
+    }
+}
+
+.origin {
+    display: flex;
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    padding: 0 50px 10px 0;
+    position: relative;
+}
+
+nav a::after {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.7s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
