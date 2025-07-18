@@ -1,0 +1,14 @@
+h1 {
+    font-family: "Jacquard 24","Caesar Dressing","Ruthie",'Courier New', Courier, monospace;
+    font-size: larger;
+}
+
+p {
+    font-family: "Caesar Dressing", "Ruthie", Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+span {
+    font-family: "Jacquard 12";
+    font-size: medium;
+}

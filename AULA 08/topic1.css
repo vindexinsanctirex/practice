@@ -1,0 +1,54 @@
+.elemento1 {
+    position: static;
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+
+.elemento2 {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    top: 25px;
+    left: 25px;
+}
+
+.container{
+    position: relative;
+    top: 50px;
+    width: 200px;
+    height: 200px;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+}
+
+.elemento3 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+}
+
+.elemento4 {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    bottom: 0;
+    right: 0;
+    border-radius: 75px;
+}
+
+.elemento5 {
+    position: sticky;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: brown;
+}
